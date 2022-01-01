@@ -21,7 +21,7 @@ public class TestNG_assertions_demo {
      public void test2() {
          //verify email contains @ sign
         String email = "mikesmith@gmail.com";
-        Assert.assertTrue(email.contains("@"));
+        Assert.assertTrue(email.contains("@"),"verify mail");
 
         }
      @Test
