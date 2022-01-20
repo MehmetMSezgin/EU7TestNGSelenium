@@ -13,9 +13,12 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
 
-    private Driver() {}
+    private Driver() {} //with private cons. I blocked to create object
+    //you can just use get() method here
+    //also it is static because I want to reach by "." from another classes
 
     private static WebDriver driver;
+    //it is private static Because I want to use same object(driver) again and again
 
     public static WebDriver get() {
         if (driver == null) {

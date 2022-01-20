@@ -23,8 +23,8 @@ public class LoginTest extends TestBase { //!!you can reach from TestBase some u
         String username = ConfigurationReader.get("driver_username");
         String password = ConfigurationReader.get("driver_password");
 
-        driver.findElement(By.name("USER_LOGIN")).sendKeys(username);
-        driver.findElement(By.name("USER_PASSWORD")).sendKeys(password + Keys.ENTER);
+        driver.findElement(By.name("_username")).sendKeys(username);
+        driver.findElement(By.name("_password")).sendKeys(password + Keys.ENTER);
         //sendKeys(password + Keys.ENTER)  //hit the enter
 
 

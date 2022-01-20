@@ -6,7 +6,7 @@ import java.util.Properties;
 public class ConfigurationReader {
     private static Properties properties;
 
-    static {//why static block Baceuse I want it runs one time before everything
+    static {//why static block Because I want it runs one time before everything
         try {
             //what file read
             String path = "configuration.properties";
