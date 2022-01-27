@@ -30,7 +30,7 @@ public class JavaScriptExecutorDemo {
 
         WebElement dropDownLink = driver.findElement(By.linkText("Dropdown"));
 
-        JavascriptExecutor jse = (JavascriptExecutor) driver ; //casting
+        JavascriptExecutor jse =  (JavascriptExecutor) driver ; //casting
 
         jse.executeScript("arguments[0].click();",dropDownLink); //I use to click the link by using javascript
 

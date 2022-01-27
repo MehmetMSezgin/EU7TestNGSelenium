@@ -42,6 +42,8 @@ public class select_dropdown_test {
         // to see options I will collect in list
         List<WebElement> options = stateDropdown.getOptions();
 
+
+
         System.out.println("options.size() = " + options.size());
         
         //shortcut for each loop
@@ -81,6 +83,7 @@ public class select_dropdown_test {
 
         //3.Select by value
         stateDropdown.selectByValue("TX"); //the value in inspect page source
+
 
     }
 

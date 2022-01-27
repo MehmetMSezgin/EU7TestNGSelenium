@@ -46,7 +46,7 @@ public class ListOfElements {
         // write iter and just click enter
         for (WebElement button : buttons) {
             System.out.println(button.getText());
-            ;
+
         }
 
         for (WebElement button : buttons) {

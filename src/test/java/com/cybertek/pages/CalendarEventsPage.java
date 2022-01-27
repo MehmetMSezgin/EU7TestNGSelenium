@@ -7,11 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CalendarEventsPage extends BasePage {
 
-    public CalendarEventsPage() {
-        PageFactory.initElements(Driver.get(), this);
-    }
+//PageFactory.initElements(Driver.get(), this);
+    //i did it in basepage no need second time
 
     @FindBy(css = "[title='Create Calendar event']")
     public WebElement createCalendarEvent;
+
+    @FindBy(xpath = "(//input[@data-name='recurrence-repeat'])")
+    public WebElement repeat ;
 
 }

@@ -4,6 +4,9 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,7 +28,9 @@ public class DisplayedDemo {
         Assert.assertFalse(usernameInput.isDisplayed());
         WebElement startButton = driver.findElement(By.cssSelector(".btn.btn-primary"));
         startButton.click();
-        Thread.sleep(6000);
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        wait.until(ExpectedConditions.elementToBeClickable(usernameInput));
+        usernameInput.sendKeys("aaaa");
         Assert.assertTrue(usernameInput.isDisplayed());
 
     }

@@ -3,13 +3,19 @@ package com.cybertek.pages;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
     public LoginPage() {
-        PageFactory.initElements(Driver.get(),this);
+        PageFactory.initElements(Driver.get(),this); //this part is important!!!!!!!
     } //this factory allows us to create FindBy annotations
+
+    /*@FindAll({
+            @FindBy(id = "prependedInput"),
+            @FindBy(name = "_username")
+    }) */
 
     //driver.findElement(By.id("prependedInput"));
     @FindBy (id = "prependedInput") //This FindBy belongs to next line WebElement
@@ -38,6 +44,17 @@ public class LoginPage {
         loginBtn.click();
     }
 
+    public void loginAsDriver () {
+        String username = ConfigurationReader.get("driver_username");
+        String password = ConfigurationReader.get("driver_password");
 
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginBtn.click();
+
+    }
+
+    //FindAll if one of locator is true it goes
+    //FindBys  it checks all locators are correct
 
 }

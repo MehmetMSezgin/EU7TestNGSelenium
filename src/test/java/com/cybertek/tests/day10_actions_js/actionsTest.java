@@ -35,6 +35,8 @@ public class actionsTest {
         //Actions ---> class that contains all the user interactions
         Actions actions = new Actions(driver);
 
+
+
         actions.moveToElement(img1).perform();
         //perform method implements
         Thread.sleep(1500);

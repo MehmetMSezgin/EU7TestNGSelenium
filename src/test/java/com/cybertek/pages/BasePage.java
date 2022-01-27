@@ -31,7 +31,7 @@ public abstract class BasePage { //it is abstract class because I dont want to c
 
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
-    }
+    } //This driver is coming from Driver class
 
 
     /**

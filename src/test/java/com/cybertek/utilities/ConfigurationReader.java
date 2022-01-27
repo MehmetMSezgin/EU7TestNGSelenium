@@ -23,7 +23,7 @@ public class ConfigurationReader {
         }
     }
 
-    public static String get(String keyName) {
+    public static String get(String keyName) { //this method is pulling information from configuration.properties file
         return  properties.getProperty(keyName); }
 
 }
